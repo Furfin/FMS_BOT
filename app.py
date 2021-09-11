@@ -66,7 +66,7 @@ def respond():
                     curr_pair.append(' ')
                 flags['pair_c'] += 1
 
-        bot.sendMessage(chat_id=chat_id, text='feature not ready yet', reply_to_message_id=msg_id)
+        bot.sendMessage(chat_id=chat_id, text=msg, reply_to_message_id=msg_id)
     else:
         bot_msg = 'Unknown message, please try again'
         bot.sendMessage(chat_id=chat_id, text=bot_msg, reply_to_message_id=msg_id)
