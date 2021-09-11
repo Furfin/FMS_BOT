@@ -18,7 +18,7 @@ def respond():
     chat_id = update.message.chat_id
     msg_id = update.message.message_id
 
-    text = update.message.encode('utf-8').decode()
+    text = update.message.encode('utf-8')
     print('got text message:',text)
     if text == '/start':
         bot_msg = 'Welcome home, fellow student, feel free to ask me a thing or two about your beloved MTUCI !'
