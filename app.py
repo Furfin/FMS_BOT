@@ -1,7 +1,7 @@
 from flask import Flask, request
-import pandas as pd
+
 import telegram
-from telebot.credentials import bot_token, bot_user_name,URL,sch_msg
+from telebot.credentials import bot_token, bot_user_name,URL
 
 global bot
 global TOKEN
@@ -46,7 +46,7 @@ def set_webhook():
 
 @app.route('/')
 def index():
-    return sch_msg()
+    return 'NOne'
 
 if __name__ == '__main__':
     app.run(threaded = True)
