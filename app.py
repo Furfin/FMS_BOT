@@ -29,7 +29,7 @@ def respond():
         bot.sendMessage(chat_id=chat_id,text = bot_msg,reply_to_message_id = msg_id)
     elif text == '/sch':
 
-        bot.sendMessage(chat_id=chat_id, text=sch_msg(), reply_to_message_id=msg_id)
+        bot.sendMessage(chat_id=chat_id, text='Feature not ready yet', reply_to_message_id=msg_id)
     else:
         bot_msg = 'Unknown message, please try again'
         bot.sendMessage(chat_id=chat_id, text=bot_msg, reply_to_message_id=msg_id)
