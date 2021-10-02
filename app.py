@@ -22,8 +22,12 @@ def respond():
     text = update.message.text
     print('got text message:',text)
     if text == '/start':
+<<<<<<< HEAD
         bot_msg = """Welcom
          fellow, feel free to ask me a thing or two about your beloved MTUCI !
+=======
+        bot_msg = """Welcome home, fellow student, feel free to ask me a thing or two about your beloved MTUCI !
+>>>>>>> parent of b067a1a... test 1
         commands :
         - /sch
         """
