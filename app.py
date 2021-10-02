@@ -22,23 +22,8 @@ def respond():
     text = update.message.text
     print('got text message:',text)
     if text == '/start':
-<<<<<<< HEAD
-        bot_msg = """Welcom
-<<<<<<< HEAD
-<<<<<<< HEAD
-         fellow, feel  to ask me a thing or about your beloved MTUCI !
-=======
-         fellow, feel free to ask me a thing or two about your beloved MTUCI !
->>>>>>> parent of 5d159e9... Revert "test 2"
-=======
-         fellow, feel free to ask me a thing or two about your beloved MTUCI !
->>>>>>> parent of 5d159e9... Revert "test 2"
-=======
-        bot_msg = """Welcome home, fellow student, feel free to ask me a thing or two about your beloved MTUCI !
->>>>>>> parent of b067a1a... test 1
-        commands :
-        - /sch
-        """
+
+        bot_msg = """Welcom"""
         bot.sendMessage(chat_id=chat_id,text = bot_msg,reply_to_message_id = msg_id)
     elif text == '/sch':
 
