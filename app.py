@@ -22,7 +22,8 @@ def respond():
     text = update.message.text
     print('got text message:',text)
     if text == '/start':
-        bot_msg = """Welcome home, fellow, feel free to ask me a thing or two about your beloved MTUCI !
+        bot_msg = """Welcom
+         fellow, feel free to ask me a thing or two about your beloved MTUCI !
         commands :
         - /sch
         """
