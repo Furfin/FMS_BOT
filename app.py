@@ -23,7 +23,7 @@ def respond():
     print('got text message:',text)
     if text == '/start':
 
-        bot_msg = """Welcom"""
+        bot_msg = """Welcummm"""
         bot.sendMessage(chat_id=chat_id,text = bot_msg,reply_to_message_id = msg_id)
     elif text == '/sch':
 
