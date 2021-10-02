@@ -25,7 +25,11 @@ def respond():
 <<<<<<< HEAD
         bot_msg = """Welcom
 <<<<<<< HEAD
+<<<<<<< HEAD
          fellow, feel  to ask me a thing or about your beloved MTUCI !
+=======
+         fellow, feel free to ask me a thing or two about your beloved MTUCI !
+>>>>>>> parent of 5d159e9... Revert "test 2"
 =======
          fellow, feel free to ask me a thing or two about your beloved MTUCI !
 >>>>>>> parent of 5d159e9... Revert "test 2"
