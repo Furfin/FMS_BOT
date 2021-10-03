@@ -14,36 +14,39 @@ app = Flask(__name__)
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
-    update = telegram.Update.de_json(request.get_json(force=True),bot)
+    try:
+        update = telegram.Update.de_json(request.get_json(force=True),bot)
 
-    chat_id = update.message.chat_id
-    msg_id = update.message.message_id
+        chat_id = update.message.chat_id
+        msg_id = update.message.message_id
 
-    text = update.message.text
-    print('got text message:',text)
-    if text == '/start':
-        bot_msg = """Привет!
-        Этот бот поможет тебе узнать актуальное расписание
-                            """
-        bot.sendMessage(chat_id=chat_id,text = bot_msg)
+        text = update.message.text
+        print('got text message:',text)
+        if text == '/start':
+            bot_msg = """Привет!
+            Этот бот поможет тебе узнать актуальное расписание
+                                """
+            bot.sendMessage(chat_id=chat_id,text = bot_msg)
 
-    elif text == '/sch':
-        bot.sendMessage(chat_id=chat_id, text='Feature not ready yet')
+        elif text == '/sch':
+            bot.sendMessage(chat_id=chat_id, text='Feature not ready yet')
 
-    elif text =='/help':
-        bot_msg = """Список команд:
-        - /sch
-        - /help
-        - /start
-                            """
-        bot.sendMessage(chat_id=chat_id,text = bot_msg)
+        elif text =='/help':
+            bot_msg = """Список команд:
+            - /sch
+            - /help
+            - /start
+                                """
+            bot.sendMessage(chat_id=chat_id,text = bot_msg)
 
 
-    else:
-        bot_msg = 'Неизвестная комманда. Используйте /help для вывода списка команд'
-        bot.sendMessage(chat_id=chat_id, text=bot_msg)
+        else:
+            bot_msg = 'Неизвестная комманда. Используйте /help для вывода списка команд'
+            bot.sendMessage(chat_id=chat_id, text=bot_msg)
 
-    return 'ok'
+        return 0
+    except:
+        return 404
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
