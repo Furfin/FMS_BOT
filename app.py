@@ -44,10 +44,9 @@ def respond():
             bot_msg = 'Неизвестная комманда. Используйте /help для вывода списка команд'
             bot.sendMessage(chat_id=chat_id, text=bot_msg)
 
-        return 0
+        return 'ok'
     except:
-        return 404
-
+        return 'Bad request'
 @app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
