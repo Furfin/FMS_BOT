@@ -8,7 +8,7 @@ global TOKEN
 TOKEN = bot_token
 bot = telegram.Bot(token=TOKEN)
 
-# start the flask app
+
 app = Flask(__name__)
 
 
@@ -22,15 +22,27 @@ def respond():
     text = update.message.text
     print('got text message:',text)
     if text == '/start':
+        bot_msg = """Привет!
+        Этот бот поможет тебе узнать актуальное расписание
+                            """
+        bot.sendMessage(chat_id=chat_id,text = bot_msg)
 
-        bot_msg = """Welcummm"""
-        bot.sendMessage(chat_id=chat_id,text = bot_msg,reply_to_message_id = msg_id)
     elif text == '/sch':
+        bot.sendMessage(chat_id=chat_id, text='Feature not ready yet')
 
-        bot.sendMessage(chat_id=chat_id, text='Feature not ready yet', reply_to_message_id=msg_id)
+    elif text =='/help':
+        bot_msg = """Список команд:
+        - /sch
+        - /help
+        - /start
+                            """
+        bot.sendMessage(chat_id=chat_id,text = bot_msg)
+
+
     else:
-        bot_msg = 'Unknown message, please try again'
-        bot.sendMessage(chat_id=chat_id, text=bot_msg, reply_to_message_id=msg_id)
+        bot_msg = 'Неизвестная комманда. Используйте /help для вывода списка команд'
+        bot.sendMessage(chat_id=chat_id, text=bot_msg)
+
     return 'ok'
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
