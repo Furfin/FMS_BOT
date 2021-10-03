@@ -2,6 +2,7 @@ from flask import Flask, request
 
 import telegram
 from telebot.credentials import bot_token, bot_user_name,URL
+from telebot import db_controller
 
 global bot
 global TOKEN
@@ -30,6 +31,15 @@ def respond():
 
         elif text == '/sch':
             bot.sendMessage(chat_id=chat_id, text='Feature not ready yet')
+        elif '/group' in text:
+            group = text.replace('/group')
+            if group.upper() in ['БВТ210' + str(i) for i in range(1,9)]:
+
+                msg = db_controller.add_db(chat_id,group.upper())
+
+            else:
+                msg = 'Введена неправильная группа'
+            bot.sendMessage(chat_id=chat_id,text=msg)
 
         elif text =='/help':
             bot_msg = """Список команд:
