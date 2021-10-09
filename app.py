@@ -24,7 +24,7 @@ def respond():
         text = update.message.text
         print('got text message:',text)
         if text == '/start':
-            bot_msg = """Привет!
+            bot_msg = """Прnfadf!
             Этот бот поможет тебе узнать актуальное расписание
                                 """
             bot.sendMessage(chat_id=chat_id,text = bot_msg)
