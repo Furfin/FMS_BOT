@@ -24,7 +24,11 @@ def respond():
         text = update.message.text
         print('got text message:',text)
         if text == '/start':
+<<<<<<< HEAD
             bot_msg = """Привtl!
+=======
+            bot_msg = """Прnfadf!
+>>>>>>> main
             Этот бот поможет тебе узнать актуальное расписание
                                 """
             bot.sendMessage(chat_id=chat_id,text = bot_msg)
