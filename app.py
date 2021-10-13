@@ -23,7 +23,7 @@ def respond():
 
         text = update.message.text
         print('got text message:',text)
-        if text == '/start':
+                if text == '/st2art':
 <<<<<<< HEAD
 <<<<<<< HEAD
             bot_msg = """Привtet!
