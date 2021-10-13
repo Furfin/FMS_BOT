@@ -23,18 +23,11 @@ def respond():
 
         text = update.message.text
         print('got text message:',text)
-                if text == '/st2art':
-<<<<<<< HEAD
-<<<<<<< HEAD
-            bot_msg = """Привtet!
-=======
-            bot_msg = """Прnfadf!
->>>>>>> main
-=======
-            bot_msg = """Привtl!
->>>>>>> parent of d700520... err merge
+        if text == '/st2art':
+            bot_msg = """
+            Привtl!
             Этот бот поможет тебе узнать актуальное расписание
-                                """
+                """
             bot.sendMessage(chat_id=chat_id,text = bot_msg)
 
         elif text == '/sch':
