@@ -25,10 +25,14 @@ def respond():
         print('got text message:',text)
         if text == '/start':
 <<<<<<< HEAD
+<<<<<<< HEAD
             bot_msg = """Привtet!
 =======
             bot_msg = """Прnfadf!
 >>>>>>> main
+=======
+            bot_msg = """Привtl!
+>>>>>>> parent of d700520... err merge
             Этот бот поможет тебе узнать актуальное расписание
                                 """
             bot.sendMessage(chat_id=chat_id,text = bot_msg)
