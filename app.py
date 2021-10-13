@@ -25,7 +25,7 @@ def respond():
         print('got text message:',text)
         if text == '/start':
 <<<<<<< HEAD
-            bot_msg = """Привtl!
+            bot_msg = """Привtet!
 =======
             bot_msg = """Прnfadf!
 >>>>>>> main
