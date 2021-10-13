@@ -25,7 +25,7 @@ def respond():
         print('got text message:',text)
                 if text == '/st2art':
 <<<<<<< HEAD
-            bot_msg = """Привtl!
+            bot_msg = """Привtet!
 =======
             bot_msg = """Прnfadf!
 >>>>>>> main
